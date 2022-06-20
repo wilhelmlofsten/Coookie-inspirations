@@ -58,17 +58,15 @@ class _MyHomePageState extends State<MyHomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     new Image.network(
-                      ("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2017%2F11%2Fthe-joy-of-cookies-cookie-monster-blog0817.jpg&q=60"),
+                     ("https://c.tenor.com/3FFKnlwPMf8AAAAC/answer-me-phone.gif"),
                       //fit: BoxFit.cover,
                       //scale: 0.1,
                       width: 250,
                       height: 250
                       ),
                       new Text("King of cookies",
-              style: TextStyle(
-                fontSize: 20
-                ),
-              ),
+                      style: intrayPicTitleFont,
+                      ),
                   ],
                    
                 ),
@@ -110,7 +108,7 @@ class _MyHomePageState extends State<MyHomePage> {
             indicatorPadding: const EdgeInsets.all(7.0),
             indicatorColor: Colors.red,
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: lightGrey,
         ),
       ),
     );
