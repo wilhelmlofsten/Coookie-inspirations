@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: 250,
                         height: 250),
                     new Text(
-                      "King of cookies",
+                      "Cookie inspirator",
                       style: intrayPicTitleFont,
                     ),
                   ],
