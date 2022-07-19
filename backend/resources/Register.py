@@ -6,5 +6,12 @@ class Register(Resource):
         return {"message": "Getting user"}
     
     def post(self):
-        print(request.get_json())
-        return {"message": "registering user"}
+        data = request.get_json()
+        username = data['username']
+        password = data['password']
+        firstname = data['firstname'] 
+        
+        print(data['username'])  
+        print(data['password'])        
+      
+        return {"message": "registering user {}".format(username)}
