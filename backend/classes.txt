@@ -1,0 +1,22 @@
+User:
+    String userId;
+    String apiKey;
+    String firstName
+    String password; //Kanske onödig
+
+    /* Om val att ha en login screen:
+    String email
+
+SupportFile:
+    String text;
+
+CookieRecipes:
+    List<Recipes> recipes;
+    String recipesId;
+    String TitleText;
+    String DescriptionText;
+    //för bild nedan
+    String fileName
+    String mimType
+    Img img
+

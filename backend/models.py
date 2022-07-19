@@ -12,22 +12,16 @@ class User(db.Model):
     __tablename__ = 'users'
     __table_args__ = tuple(db.UniqueConstraint('id', 'username', name='my_2uniq'))
 
-    id = db.Column(db.String(), primary_key=True, unique=True)
-    api_key = db.Column(db.String(), primary_key=True, unique=True)
-    username = db.Column(db.String(), primary_key=True)
-    first_name = db.Column(db.String())
-    last_name = db.Column(db.String())
-    password = db.Column(db.String())           #might remove username, email and password if we want to add
-    emailadress = db.Column(db.String())        # some sort of authentication method with login, otherwise jwt is the way to go
 
-    def __init__(self, api_key, id, username, first_name, last_name, password, emailadress):
-        self.id = id
-        self.api_key = api_key
-        self.username = username
-        self.first_name = first_name
-        self.last_name = last_name
+    id = db.Column(db.Integer(), primary_key=True)
+    username = db.Column(db.String(), unique=True)
+    firstname = db.Column(db.String())
+    password = db.Column(db.String())
+
+    def __init__(self, firstname, password, username):
+        self.firstname =firstname
         self.password = password
-        self.emailadress = emailadress
+        self.username = username
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -35,10 +29,7 @@ class User(db.Model):
     def serialize(self):
         return {
             'id' : self.id,
-            'api_key' : self.api_key,
             'username' : self.username,
-            'first_name' : self.first_name,
-            'last_name' : self.last_name,
+            'firstname' : self.firstname,
             'password' : self.password,
-            'emailadress' : self.emailadress
-        } 
+        }
