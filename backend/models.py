@@ -10,7 +10,7 @@ db = SQLAlchemy()
 
 class User(db.Model):
     __tablename__ = 'users'
-    __table_args__ = tuple(db.UniqueConstraint('id', 'username', name='my_2uniq'))
+    #__table_args__ = tuple(db.UniqueConstraint('id', 'username', name='my_2uniq'))
 
 
     id = db.Column(db.Integer(), primary_key=True)
