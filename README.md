@@ -1,4 +1,4 @@
 # Coookie-inspirator
 
 
-![Alt Text](https://imgur.com/a/yyMAIoy)
+![Alt Text](CookieApp.gif)
