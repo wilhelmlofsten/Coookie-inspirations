@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'models/global.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(const MyApp());
